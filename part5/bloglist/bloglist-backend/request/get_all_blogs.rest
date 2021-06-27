@@ -1,0 +1,97 @@
+GET http://localhost:3003/api/blogs
+
+###
+
+GET http://localhost:3003/api/blogs/608ddd11d9536f2821aa161c
+
+###
+
+DELETE http://localhost:3003/api/blogs/60b61ad1546d781b861d7af4
+
+###
+
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title": "Blog Test",
+    "author": "M Aydin",
+    "url": "www.m.io",
+    "likes": 500,
+    "userId": "60b5ec4788aa1811c3ad9147"
+}
+
+###
+
+GET http://localhost:3003/api/users
+
+###
+
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "Obi-Wan Kenobi",
+    "name": "Halit Aydin",
+    "password": "secret1"
+}
+
+###
+
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "Boba Fett",
+    "name": "Mertcan Aydin",
+    "password": "secret2"
+}
+
+###
+
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "deneme",
+    "name": "Cihangir Aydin",
+    "password": "tester"
+}
+
+###
+
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+    "username": "Obi-Wan Kenobi",
+    "password": "secret1"
+}
+
+###
+
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik9iaS1XYW4gS2Vub2JpIiwiaWQiOiI2MGI3NWIzNzE4YjA3YjI4MmIxOTkxNjYiLCJpYXQiOjE2MjI3MDYwNjh9.98yxp14EnTul3DkD0qgqq0CPV_WN3KKKrKe92yPFY18
+
+{
+    "title": "First Test",
+    "author": "Halit Aydin",
+    "url": "www.owk.io",
+    "likes": 300,
+    "userId": "60b75b4018b07b282b199168"
+}
+
+###
+
+DELETE http://localhost:3003/api/blogs/60b887ba5463da3864334b01
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik9iaS1XYW4gS2Vub2JpIiwiaWQiOiI2MGI3NWIzNzE4YjA3YjI4MmIxOTkxNjYiLCJpYXQiOjE2MjI4NDczODF9.oEqG1RmlAwE4EYn1p7TME1JK8t-E2maN1ulRmwNJKf8
+
+
+###
+
+PUT http://localhost:3003/api/blogs/60b8887cfcfbb8388a3b3344
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik9iaS1XYW4gS2Vub2JpIiwiaWQiOiI2MGI3NWIzNzE4YjA3YjI4MmIxOTkxNjYiLCJpYXQiOjE2MjMzOTk1OTN9.aSqrkwxiAGPuy9xLa0CrxOTy32mm1bPUJZsBHLZea10
+

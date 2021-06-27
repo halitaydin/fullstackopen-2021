@@ -1,0 +1,57 @@
+GET http://localhost:3001/api/notes
+
+###
+
+GET http://localhost:3001/api/notes/608ddd11d9536f2821aa161c
+
+###
+
+DELETE http://localhost:3001/api/notes/6091a621e38c841bea2e0d2e
+
+###
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+    "content": "User id of the note creator is at the start sent along the request ",
+    "important": true,
+    "userId": "60b10e5514df6123df8c3723"
+}
+
+###
+
+GET http://localhost:3001/api/users
+
+###
+
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "notes": [],
+    "username": "Luke Skywalker",
+    "name": "Cihangir Aydin",
+    "password": "pala"
+}
+
+###
+
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+    "username": "Luke Skywalker",
+    "password": "pala"
+}
+
+###
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikx1a2UgU2t5d2Fsa2VyIiwiaWQiOiI2MGIzZmU4MmU4NDZkMTNjYmVmYzAxNTgiLCJpYXQiOjE2MjI0NTExMzMsImV4cCI6MTYyMjQ1MTE2OX0.WGL2NM3Q5dSFVG36I8OTgYMG-Q_Y94v5w6Op8yXqlFk
+
+{
+    "content": "Authorization test 3 expires ",
+    "important": true
+}
