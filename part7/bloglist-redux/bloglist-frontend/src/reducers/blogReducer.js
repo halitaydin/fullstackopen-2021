@@ -64,6 +64,7 @@ export const initializeBlogs = () => {
 export const addComment = (id, comment) => {
   return async (dispatch) => {
     const updatedBlog = await blogService.createComments(id, comment)
+    dispatch(initializeBlogs())
     dispatch({
       type: 'NEW_COMMENT',
       data: updatedBlog,
