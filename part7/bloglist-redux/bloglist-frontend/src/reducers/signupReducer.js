@@ -1,6 +1,7 @@
 import signupService from '../services/users'
 import { notify } from '../reducers/notificationReducer'
 import { enotify } from '../reducers/errorNotificationReducer'
+import { initializeUser } from './loginReducer'
 
 export const signup = (newusername, newpassword) => {
   return async (dispatch) => {
@@ -14,6 +15,7 @@ export const signup = (newusername, newpassword) => {
         type: 'SIGNUP',
         data: user,
       })
+      dispatch(initializeUser)
       dispatch(notify(`${user.username} signup successful`, 5000))
     } catch (error) {
       error.response.data.error ? dispatch(enotify(`${error.response.data.error}`, 5000)) : null
